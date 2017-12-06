@@ -5,9 +5,9 @@
   <subtitle>Never give up!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="wenghaobin.github.io/"/>
+  <link href="/"/>
   <updated>2017-12-05T02:04:01.953Z</updated>
-  <id>wenghaobin.github.io/</id>
+  <id>/</id>
   
   <author>
     <name>好饼哥</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="wenghaobin.github.io/2017/12/05/hello-world/"/>
-    <id>wenghaobin.github.io/2017/12/05/hello-world/</id>
+    <link href="/2017/12/05/hello-world/"/>
+    <id>/2017/12/05/hello-world/</id>
     <published>2017-12-05T02:04:01.952Z</published>
     <updated>2017-12-05T02:04:01.953Z</updated>
     
