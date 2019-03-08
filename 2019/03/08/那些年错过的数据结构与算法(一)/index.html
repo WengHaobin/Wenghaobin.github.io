@@ -19,19 +19,19 @@
     <meta name="theme-color" content="#009999">
     
     
-    <meta name="keywords" content="数据结构">
-    <meta name="description" content="本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。  ###一、基本概念 ####1.算法算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。 算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1">
-<meta name="keywords" content="数据结构">
+    <meta name="keywords" content="数据结构与算法">
+    <meta name="description" content="本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。  一、基本概念1.算法算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。 算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1+1=2，可以用">
+<meta name="keywords" content="数据结构与算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="那些年错过的数据结构与算法(一)">
 <meta property="og:url" content="/2019/03/08/那些年错过的数据结构与算法(一)/index.html">
 <meta property="og:site_name" content="好饼哥&#39;s blog">
-<meta property="og:description" content="本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。  ###一、基本概念 ####1.算法算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。 算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1+1=2，可以用1个苹果+1个苹果得出，也可以用1个西瓜+1个西瓜得出，在这里">
+<meta property="og:description" content="本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。  一、基本概念1.算法算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。 算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1+1=2，可以用1个苹果+1个苹果得出，也可以用1个西瓜+1个西瓜得出，在这里苹果和西瓜就代表">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-08T07:46:26.817Z">
+<meta property="og:updated_time" content="2019-03-08T07:48:55.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="那些年错过的数据结构与算法(一)">
-<meta name="twitter:description" content="本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。  ###一、基本概念 ####1.算法算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。 算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1+1=2，可以用1个苹果+1个苹果得出，也可以用1个西瓜+1个西瓜得出，在这里">
+<meta name="twitter:description" content="本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。  一、基本概念1.算法算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。 算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1+1=2，可以用1个苹果+1个苹果得出，也可以用1个西瓜+1个西瓜得出，在这里苹果和西瓜就代表">
     
         <link rel="alternate" type="application/atom+xml" title="好饼哥&#39;s blog" href="/atom.xml">
     
@@ -154,6 +154,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、基本概念"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、基本概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-算法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-算法的基本特征"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.算法的基本特征</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#有穷性-有限性-："><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">有穷性(有限性)：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#确定性："><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">确定性：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#可行性-有效性-："><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">可行性(有效性)：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#稳定的输入输出："><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">稳定的输入输出：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-算法的基本要素"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.算法的基本要素</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-对数据的运算和操作"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">(1).对数据的运算和操作</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-算法的控制结构"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">(2).算法的控制结构</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、算法复杂度"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、算法复杂度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-时间复杂度"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.时间复杂度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#最坏情况分析是指以最坏的情况估算算法执行时间的上界。"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">最坏情况分析是指以最坏的情况估算算法执行时间的上界。</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-空间复杂度"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.空间复杂度</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-那些年错过的数据结构与算法(一)"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -176,23 +183,17 @@
             <blockquote>
 <p>本系列文章将结合《算法》第4版、业界大牛的博客和自己的理解，如有错误，请大佬指出，谢谢。</p>
 </blockquote>
-<p>###一、基本概念</p>
-<p>####1.算法<br>算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。</p>
+<h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1-算法"><a href="#1-算法" class="headerlink" title="1.算法"></a>1.算法</h4><p>算法是用来描述一种有限、确定、有效的并适合用计算机程序来实现的解决问题的方法。简单来说，算法就是解决问题的办法。</p>
 <p>算法可以用任何编程语言很好地表达或者说实现，但是算法脱离编程语言。打个比方，1+1=2，可以用1个苹果+1个苹果得出，也可以用1个西瓜+1个西瓜得出，在这里苹果和西瓜就代表2种编程语言，虽然编程语言不同，但是算法都是加法，最终得出的数量都是一样的。这就说明算法是为了解决问题，而不在乎是哪门编程语言。</p>
-<p>####2.算法的基本特征</p>
-<p>#####有穷性(有限性)：<br>指算法要在执行了有穷步骤之后结束，且每一步都在有穷时间内完成。</p>
-<p>#####确定性：<br>指算法的每条指令都有确切的含义，不存在多义性。因此，一般来说，相同的输入只能得到相同的输出。</p>
-<p>#####可行性(有效性)：<br>指算法可以通过已实现的基本运算执行有限次来实现。</p>
-<p>#####稳定的输入输出：<br>必须有0个以上的输入，以及1个以上的输出结果。</p>
-<p>####3.算法的基本要素</p>
-<p>#####(1).对数据的运算和操作<br>一般包括4种运算和操作：算数运算(加减乘除等)、逻辑运算(与或非等)、关系运算(大于、小于等)和数据传输(赋值、输入、输出等)。</p>
-<p>#####(2).算法的控制结构<br>指算法中各操作之间执行的顺序，会影响算法的效果。包括顺序结构、选择结构和循环结构。</p>
-<p>###二、算法复杂度</p>
-<p>####1.时间复杂度<br>指执行算法所需要的时间，用算法所执行的基本运算次数来度量，而这个基本运算次数是问题规模n的函数。下一篇博客会具体讲，这里就不多说了。</p>
+<h4 id="2-算法的基本特征"><a href="#2-算法的基本特征" class="headerlink" title="2.算法的基本特征"></a>2.算法的基本特征</h4><h5 id="有穷性-有限性-："><a href="#有穷性-有限性-：" class="headerlink" title="有穷性(有限性)："></a>有穷性(有限性)：</h5><p>指算法要在执行了有穷步骤之后结束，且每一步都在有穷时间内完成。</p>
+<h5 id="确定性："><a href="#确定性：" class="headerlink" title="确定性："></a>确定性：</h5><p>指算法的每条指令都有确切的含义，不存在多义性。因此，一般来说，相同的输入只能得到相同的输出。</p>
+<h5 id="可行性-有效性-："><a href="#可行性-有效性-：" class="headerlink" title="可行性(有效性)："></a>可行性(有效性)：</h5><p>指算法可以通过已实现的基本运算执行有限次来实现。</p>
+<h5 id="稳定的输入输出："><a href="#稳定的输入输出：" class="headerlink" title="稳定的输入输出："></a>稳定的输入输出：</h5><p>必须有0个以上的输入，以及1个以上的输出结果。</p>
+<h4 id="3-算法的基本要素"><a href="#3-算法的基本要素" class="headerlink" title="3.算法的基本要素"></a>3.算法的基本要素</h4><h5 id="1-对数据的运算和操作"><a href="#1-对数据的运算和操作" class="headerlink" title="(1).对数据的运算和操作"></a>(1).对数据的运算和操作</h5><p>一般包括4种运算和操作：算数运算(加减乘除等)、逻辑运算(与或非等)、关系运算(大于、小于等)和数据传输(赋值、输入、输出等)。</p>
+<h5 id="2-算法的控制结构"><a href="#2-算法的控制结构" class="headerlink" title="(2).算法的控制结构"></a>(2).算法的控制结构</h5><p>指算法中各操作之间执行的顺序，会影响算法的效果。包括顺序结构、选择结构和循环结构。</p>
+<h3 id="二、算法复杂度"><a href="#二、算法复杂度" class="headerlink" title="二、算法复杂度"></a>二、算法复杂度</h3><h4 id="1-时间复杂度"><a href="#1-时间复杂度" class="headerlink" title="1.时间复杂度"></a>1.时间复杂度</h4><p>指执行算法所需要的时间，用算法所执行的基本运算次数来度量，而这个基本运算次数是问题规模n的函数。下一篇博客会具体讲，这里就不多说了。</p>
 <p>在这里，会出现一种情况，在同一问题规模下，算法执行所需的基本运算次数取决于某一个特定输入的数据时，要用平均值分析或者最坏情况分析这2种方法来分析算法的工作量。其中，最坏情况分析比较常用。</p>
-<p>#####平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。</p>
-<p>#####最坏情况分析是指以最坏的情况估算算法执行时间的上界。</p>
-<p>####2.空间复杂度<br>指执行算法期间所需要占用的内存空间，包括3部分：算法程序所占用的空间、输入的初始数据所占用的存储空间以及算法执行过程中所需要的额外空间。</p>
+<h5 id="平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。"><a href="#平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。" class="headerlink" title="平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。"></a>平均值分析是指输入所有可能的平均值得到对应的时间复杂度就是算法的平均时间复杂度。</h5><h5 id="最坏情况分析是指以最坏的情况估算算法执行时间的上界。"><a href="#最坏情况分析是指以最坏的情况估算算法执行时间的上界。" class="headerlink" title="最坏情况分析是指以最坏的情况估算算法执行时间的上界。"></a>最坏情况分析是指以最坏的情况估算算法执行时间的上界。</h5><h4 id="2-空间复杂度"><a href="#2-空间复杂度" class="headerlink" title="2.空间复杂度"></a>2.空间复杂度</h4><p>指执行算法期间所需要占用的内存空间，包括3部分：算法程序所占用的空间、输入的初始数据所占用的存储空间以及算法执行过程中所需要的额外空间。</p>
 <p>实际应用中，为了减少算法所占用的存储空间，通常采用压缩存储技术，用于减少不必要的额外空间。</p>
 <blockquote>
 <p>这一篇讲的是算法的一些基本的概念，没啥好说的，多读几遍就明白了。个人认为时间复杂度的计算比较重要，面试很多都会遇到，所以会有一篇专门写这个计算，敬请期待&lt;(￣︶￣)&gt;。</p>
@@ -204,7 +205,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-08T07:46:26.817Z" itemprop="dateUpdated">2019-03-08 15:46:26</time>
+    最后更新时间：<time datetime="2019-03-08T07:48:55.734Z" itemprop="dateUpdated">2019-03-08 15:48:55</time>
 </span><br>
 
 
@@ -225,7 +226,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li></ul>
 
 
             
