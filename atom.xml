@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2017-12-05T02:04:01.953Z</updated>
+  <updated>2017-12-08T09:08:37.000Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,85 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo my blog</title>
+    <link href="/2017/12/08/hexo-my-blog/"/>
+    <id>/2017/12/08/hexo-my-blog/</id>
+    <published>2017-12-08T08:34:14.000Z</published>
+    <updated>2017-12-08T09:08:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这阵子各种事情忙，到了51劳动节假期才有时间来写这篇博客记录一下hexo my blog的艰辛历程。</p></blockquote><p>##什么是Hexo？</p><p>Hexo 是一个快速、简洁且高效的博客框架。使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。据说作者是一位来自台湾的大学生tommy351，表示深深的膜拜。接下来就是用Hexo搭建博客的过程, hexo.io/zh-cn/ 这是Hexo的中文官网(注意可能有墙),上面有文档查看、主题下载。由于我用的是Mac,所以本文主要就是针对Mac端,用Hexo+github搭建个人博客啦啦啦啦(其实win端步骤也差不多的)。首先捋一下过程：</p><blockquote><p>1.首先hexo是基于node.js的，所以必须安装node.js</p><p>2.安装node.js方法很多，我选择homebrew安装方式(简单粗暴)</p><p>3.安装homebrew就很简单了，mac自带ruby脚本功能，一句话OK</p><p>4.hexo提交部署github需要使用git工具，所以需要安装git，用homebrew的话也是一句话搞定</p><p>5.整理一下安装顺序（homebrew-node.js-hexo-git）</p></blockquote><p>OK，思路清晰了，开工！</p><p>###一、下载Homebrew</p><p><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p><p>###二、安装Node.js</p><p><code>brew install node</code>     </p><p>###三、安装Hexo</p><p>####1.全局安装Hexo</p><p><code>npm install -g hexo</code></p><p>如果遇到错误，应该是被墙堵住了，那就要这样安装</p><p><code>npm install -g hexo-cli --no-optional</code></p><h4 id="2-创建blog文件夹-需要进入到自己要存放的目录下再执行，不然默认是在Mac的个人这个文件夹下创建"><a href="#2-创建blog文件夹-需要进入到自己要存放的目录下再执行，不然默认是在Mac的个人这个文件夹下创建" class="headerlink" title="2.创建blog文件夹(需要进入到自己要存放的目录下再执行，不然默认是在Mac的个人这个文件夹下创建)"></a>2.创建blog文件夹(需要进入到自己要存放的目录下再执行，不然默认是在Mac的个人这个文件夹下创建)</h4><p><code>hexo init blog</code>   </p><h4 id="3-进入blog文件夹"><a href="#3-进入blog文件夹" class="headerlink" title="3.进入blog文件夹"></a>3.进入blog文件夹</h4><p><code>cd blog</code>    </p><h4 id="4-安装Hexo依赖包"><a href="#4-安装Hexo依赖包" class="headerlink" title="4.安装Hexo依赖包"></a>4.安装Hexo依赖包</h4><p><code>npm install</code></p><h4 id="5-运行服务器（默认地址为-http-localhost-4000-在浏览器打开就可以预览到默认主题的博客首页啦）"><a href="#5-运行服务器（默认地址为-http-localhost-4000-在浏览器打开就可以预览到默认主题的博客首页啦）" class="headerlink" title="5.运行服务器（默认地址为 http://localhost:4000 在浏览器打开就可以预览到默认主题的博客首页啦）"></a>5.运行服务器（默认地址为 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 在浏览器打开就可以预览到默认主题的博客首页啦）</h4><p><code>hexo server  （ 缩写是 hexo s ）</code></p><blockquote><h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><ol><li>如果遇到因为权限问题报错，在命令最前面加 -sudo</li><li>这里不需要运行 hexo g 指令，我们打开访问的页面是node.js动态生成的，也就是本地网页。</li></ol></blockquote><p>###四、 安装Git</p><p>####1. 安装Git<br>在这里我试了2种方法，第一种是直接用homebrew下载，第二种是下载Xcode，因为Xcode自带git，但是下载Xcode，显得有些累赘，如果不是iOS开发，Xcode就没啥用还占空间，当然如果是IOS开发就可以用第二种方法,简单粗暴。但在这里我推荐第一种——直接用homebrew下载：</p><p><code>sudo brew install git</code></p><p>先注册一个github账号以及创建一个仓库用来存放博客文件才可以进行以下的配置</p><p>这个就没什么好说的啦，简单操作。(实在不会就看看这个链接<a href="http://www.jianshu.com/p/13e64c9e2295" target="_blank" rel="noopener">http://www.jianshu.com/p/13e64c9e2295</a>)</p><p>####2.配置Git</p><p>#####(1).检查SSH keys是否存在</p><p><code>cd ~/.ssh</code></p><p>如果显示“No such file or directory”，跳到第3步，否则第2步。</p><p>#####(2).备份和移除原来的SSh key设置(因为已经存在key文件，所以需要备份旧的数据并删除)</p><p>在相应路径下（~/.ssh/id_rsa.pub）找到id_rsa和id_rsa.pub两个文件,剪切到别的地方备份好。</p><p>#####(3).生成新的SSH Key(注意将your_email@example.com换成自己注册Github的邮箱地址。后面只需要默认设置就好，所以当需要输入文件名的时候，果断回车。)</p><p><code>$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code></p><p>接着系统会让你输入密码<br><code>Enter passphrase (empty for no passphrase):&lt;输入密码&gt;</code></p><p><code>Enter same passphrase again:&lt;再次输入密码&gt;</code></p><p>然后就默认会在相应路径下（~/.ssh/id_rsa.pub）生成id_rsa和id_rsa.pub两个文件，找到id_rsa.pub文件，用文本编辑器打开，复制出来。<br>登陆github，点击右上角的 </p><blockquote><p>Account—&gt;Settings—&gt;SSH Public keys —&gt; add another public keys</p></blockquote><p>把刚刚复制的SSH Key到里面（key文本框中），点击 add key 就ok了。</p><p>最后我们来测试一下SSH Key是不是配置好了</p><p><code>ssh -T git@github.com</code></p><p>如果是这样的：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p><p>淡定，输入<code>yes</code>就会看到</p><p>Hi <em>username</em>! You’ve successfully authenticated, but GitHub does not provide shell access.<br>到这里只是能通过SSH Key链接github，但是还没完，为了通过git来提交博客的文章，我们还需要配置好git的账号</p><p><code>git config --global user.name &quot;你的github名字&quot;</code></p><p><code>git config --global user.email &quot;你注册github的邮箱&quot;</code></p><p>到这里才算是真正配置好Git了，下面就开始配置自己的博客啦。</p><p>###五、配置博客</p><blockquote><p>注意：在配置所有的_config.yml文件时（包括theme中的），在所有的冒号:后边都要加一个空格，否则执行hexo命令会报错，切记 切记</p></blockquote><p>本地的blog文件夹下内容为：</p><blockquote><p>_config.yml<br>db.json<br>node_modules<br>package.json<br>scaffolds<br>source<br>themes</p></blockquote><p>####首先，把github部署为博客的仓库。</p><p>#####1.打开blog文件夹下的_config.yml，往下滑到最后，修改成下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: https://github.com/Wenghaobin/wenghaobin.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure></p><p>#####2.在blog文件夹目录下执行生成静态页面命令：</p><p><code>hexo generate        或者：hexo g</code></p><p>此时若出现如下报错：</p><blockquote><p> ERROR Local hexo not found in ~/blog </p><p> ERROR Try runing: ‘npm install hexo –save</p></blockquote><p>则执行命令：<br><code>npm install hexo --save</code></p><p>若无报错，自行忽略此步骤。</p><p>#####3.再执行配置命令：</p><p><code>hexo deploy            或者：hexo d</code></p><p>注意：若执行命令hexo deploy仍然报错：无法连接git，则执行如下命令来安装hexo-deployer-git，安装完应该出现在node_modules文件夹下</p><p><code>npm install hexo-deployer-git --save</code></p><p>然后再次执行<code>hexo g</code>和<code>hexo d</code>命令，在浏览器中打开网址<a href="http://wenghaobin.github.io（将wenghaobin换成你的用户名）能看到http://localhost:4000时一样的页面。" target="_blank" rel="noopener">http://wenghaobin.github.io（将wenghaobin换成你的用户名）能看到http://localhost:4000时一样的页面。</a></p><p>OK!博客和github连接成功！</p><p>###六、更换主题</p><blockquote><p>哈哈，作为爱装b的新时代骚年，一定要选一个自己喜欢的主题才行！</p></blockquote><p>####1.下载主题和依赖<br>你可以到Hexo官网主题页去搜寻自己喜欢的theme。这里以hexo-theme-indigo为例</p><p>终端cd到 blog 目录下执行如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:yscoder/hexo-theme-indigo.git themes/indigo  &lt;下载主题&gt; </span><br><span class="line">npm install hexo-renderer-less --save  &lt;下载依赖&gt;</span><br><span class="line">npm install hexo-generator-feed --save  &lt;下载依赖&gt;</span><br></pre></td></tr></table></figure><p>####2.配置主题<br>修改hexo/_config.yml，肉眼可见的就不讲了，最关键是下面2个：</p><h5 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h5><p><code>theme: indigo</code></p><h5 id="插件依赖"><a href="#插件依赖" class="headerlink" title="插件依赖"></a>插件依赖</h5><p><code>plugins: -hexo-renderer-less -hexo-generator-feed</code></p><p>嘿嘿，主题到这里就安装成功了，然后就进入blog/themes/indigo目录下，打开_config.yml文件(里面已经写好注释)，开始配置博客中属于自己的内容。</p><h5 id="修改完之后，终端cd到blog目录下执行如下命令-每次部署了主题或文章的步骤-："><a href="#修改完之后，终端cd到blog目录下执行如下命令-每次部署了主题或文章的步骤-：" class="headerlink" title="修改完之后，终端cd到blog目录下执行如下命令(每次部署了主题或文章的步骤)："></a>修改完之后，终端cd到blog目录下执行如下命令(每次部署了主题或文章的步骤)：</h5><p><code>hexo clean           //清除缓存文件 (db.json) 和已生成的静态文件 (public)</code></p><p><code>hexo g             //生成缓存和静态文件</code></p><p> <code>hexo d             //重新部署到服务器</code></p><p>然后在浏览器中打开网址<a href="http://wenghaobin.github.io（将wenghaobin换成你的用户名）能看到刚刚安装的主题和刚刚修改的内容。" target="_blank" rel="noopener">http://wenghaobin.github.io（将wenghaobin换成你的用户名）能看到刚刚安装的主题和刚刚修改的内容。</a></p><p>哈哈，到这里用hexo+github搭建的博客就基本搞定啦，跟着教程走，博客马上有！作为爱折腾的程序猿，怎么甘心到这里就结束呢？还要换一个属于自己的域名才对得起自己嘛，继续往下走。</p><p>###七、更换域名</p><blockquote><p>我选的是Freenom的免费域名，一年免费，还是不错的。<br>DNS解析用的是DNSPod,也是免费的，嘿嘿。</p></blockquote><p>注意：添加了域名解析之后要在source目录下创建一个CNAME,在里面写上自己申请的域名地址,然后重新部署到github当中</p><p>这里就不详细说明这俩步骤了,下面的链接里有详细的说明<a href="http://www.chinaz.com/web/2015/0312/389381.shtml" target="_blank" rel="noopener">http://www.chinaz.com/web/2015/0312/389381.shtml</a></p><p>至此，hexo+github的博客才算搭建完成。</p><p>####后记</p><p>以上便是我搭建本博客的全过程，希望对大家有所帮助，欢迎吐槽～</p><p>转载请保留原文地址：<a href="http://wenghaobin.ga/2016/05/01/HexoMyBlog/" target="_blank" rel="noopener">http://wenghaobin.ga/2016/05/01/HexoMyBlog/</a></p><p>####参考文章</p><p>1.Hexo官方文档: <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/index.html</a></p><p>2.hexo你的博客: <a href="http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool" target="_blank" rel="noopener">http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool</a></p><p>3.申请免费域名和域名解析教程：<a href="http://www.chinaz.com/web/2015/0312/389381.shtml" target="_blank" rel="noopener">http://www.chinaz.com/web/2015/0312/389381.shtml</a></p><p>4.如何搭建一个独立博客——简明Github Pages与Hexo教程: <a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">http://www.jianshu.com/p/05289a4bc8b2</a></p><p>5.Mac上搭建基于GitHub的Hexo博客: <a href="http://www.jianshu.com/p/13e64c9e2295" target="_blank" rel="noopener">http://www.jianshu.com/p/13e64c9e2295</a></p><p>6.在Mac下通过HEXO在Github上搭建博客: <a href="http://www.jianshu.com/p/ecd51e8ef2fa" target="_blank" rel="noopener">http://www.jianshu.com/p/ecd51e8ef2fa</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这阵子各种事情忙，到了51劳动节假期才有时间来写这篇博客记录一下hexo my blog的艰辛历程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;##什么是Hexo？&lt;/p&gt;
+&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。使用 Markdown（
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello blog</title>
+    <link href="/2017/12/08/hello-blog/"/>
+    <id>/2017/12/08/hello-blog/</id>
+    <published>2017-12-08T08:07:05.000Z</published>
+    <updated>2017-12-08T08:07:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>从三月份开始就一直想搭一个属于自己的个人博客，不愿意收到平台的束缚，兜兜转转,到今天才真正搭好。</p><p>一开始用的 github 上一个开源项目，一键生成的博客<a href="https://github.com/isnowfy/simple" target="_blank" rel="noopener">simple.</a>十分的简单，作者实在很强大，还做了博客的编辑页面，完全不用再下载编辑器，而且每一篇博客都是一键生成，不需要使用命令行，方便到极点。比较懒的同学可以试试。</p><p>但是后来发现那不是我的菜，毕竟是做开发的程序猿，天生爱折腾，就开始琢磨用 Hexo+github 搭建一个。第一次搭的时候由于对命令行的不熟悉失败了，然后这个搭建博客的计划就搁置了。后来有一天在查资料的时候猛地就想起来这件事，就又开始搭建，这第二次总算成功了，跟着教程一步步做，但由于不是每个人设备和环境都一样，也踩了很多坑，查阅了很多资料。教程里的主题用的是 Next,作为Material Design(文中均用MD来代替)深度爱好者的我来说，怎么可能没想到去找 MD风格的主题呢？找啊找，终于找到了——<a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">hexo-theme-indigo</a>. 第一眼看到这个主题我就决定要用它，哈哈，MD实在太美了,实在无法把持.在趟了无数的坑之后，这个博客终于搭建好了，下一篇博客就会记录当中的种种辛酸(做抹眼泪状)。</p><p>作为计算机科班出身的我来说，随着工作越发觉得自己的基础很差不扎实，就说现在正在做的Android，很多基础的知识掌握的都很散乱，并没有系统性的概念，我就觉得很有必要系统地去再学习一遍，巩固一下，同时将自己平时学到的看到的知识做个系统的总结，遇到的问题做个记录，发现的一些新奇有趣的也记下来，以免再次遇到的时候又要重新去搜索引擎找。</p><p>希望自己能坚持不懈，提高自己的技术。</p><p>共勉。<br>记于2016年4月25日</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;从三月份开始就一直想搭一个属于自己的个人博客，不愿意收到平台的束缚，兜兜转转,到今天才真正搭好。&lt;/p&gt;
+&lt;p&gt;一开始用的 github 上一个开源项目，一键生成的博客&lt;a href=&quot;https://github.com/isnowfy/simple&quot; target=&quot;_
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog 重生啦!</title>
+    <link href="/2017/12/08/blog%E9%87%8D%E7%94%9F%E5%95%A6/"/>
+    <id>/2017/12/08/blog重生啦/</id>
+    <published>2017-12-08T07:42:09.000Z</published>
+    <updated>2017-12-08T08:04:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个blog是2016年4月25日完全建起来的，还记得那几天一边看着网上的教程，一边跟着敲命令行，在遇到各种坑以及填坑之后把blog搭起来了，还想着坚持下去，勤奋写文章，提升自己。在刚开始的一段时间还能坚持写文章，后来就越来越懒，越来越懒···懒到免费域名１年到期发邮件才想起来我还有个blog。(ಥ_ಥ)不过当时的我因为忙着前公司的项目，一直没空搭理他。后来17年6月份离职了忙着找工作也没怎么管他，虽然期间一直有写文章，但都放在了简书上。10月底的时候来到了现在的公司，公司很赞，有大佬一起做项目，比起上家公司一个人搞项目好了很多。时间来到了12月，公司项目也完成了版本迭代，事情也没那么多，就想起来这个blog。我可怜的blog啊，竟然被我遗忘了这么久。┐(ﾟ～ﾟ)┌ 于是重新打开，域名没了，页面都跑丢了···无奈之下也是无聊之下跑去看了看blog用的开源主题<br><a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">hexo-theme-indigo</a>，发现已经多了一种样式，我还很喜欢。于是就着手更新主题，更换域名，添加域名解析。可惜手残的我，一不小心把之前的文章都删了，最后只找回刚开始的几篇。 ヽ(。&gt;д&lt;)ｐ真的是伤心到变形！经过一番努力，blog就变成了现在看到的样子，自我感觉很良好(^o^)/。接下来要完成的是添加coding的域名，实现国内走coding，国外走github的形式，据说这样的话解析速度会快很多（其实就是装逼(≧∪≦)）真的要好好坚持下去，维护好这个blog。</p><p>越努力越幸运！</p><p>记与2017年12月8日15：38分</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这个blog是2016年4月25日完全建起来的，还记得那几天一边看着网上的教程，一边跟着敲命令行，在遇到各种坑以及填坑之后把blog搭起来了，还想着坚持下去，勤奋写文章，提升自己。在刚开始的一段时间还能坚持写文章，后来就越来越懒，越来越懒···懒到免费域名１年到期发邮件才想
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2017/12/05/hello-world/"/>
     <id>/2017/12/05/hello-world/</id>
-    <published>2017-12-05T02:04:01.952Z</published>
-    <updated>2017-12-05T02:04:01.953Z</updated>
+    <published>2017-12-05T02:04:01.000Z</published>
+    <updated>2017-12-05T02:04:01.000Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
